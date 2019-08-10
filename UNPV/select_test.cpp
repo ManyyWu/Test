@@ -171,7 +171,6 @@ server_test ()
     for (int i = 0; i < MAX_CONN; i++)
         if (-1 != clientfd[i])
             close(clientfd[i]);
-    close(listen_fd);
     printf("LOGINFO: all connection closed\n");
 
     return 0;
