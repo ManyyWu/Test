@@ -137,7 +137,7 @@ server_test ()
                     if (ret <= 0) {
                         close(clientfd[i]);
                         clientfd[i] = -1;
-                        if (ret) {
+                        if (!ret) {
                             printf("LOGERR: read error@%s\n", strerror(errno));
                         } else { // connection closed
                             printf("LOGINFO: connnection [%s: %d] closed\n",
