@@ -230,7 +230,7 @@ client_test ()
             /* read */
             ret = fscanf(stdin, "%s", buf);
             if (ret <= 0) {
-                if (feof(stdin))
+                if (ret)
                     printf("LOGINFO: EOF\n");
                 else
                     printf("LOGERR: read error@%s\n", strerror(errno));
